@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation & Guides
+    url: https://meala.dev
+    about: Setup instructions, Docker deployment guides, and telemetry schema references.
+  - name: Community Q&A and Troubleshooting
+    url: https://github.com/orgs/mealadev/discussions
+    about: Ask questions about log parsing, self-hosting, or autopilot integrations.

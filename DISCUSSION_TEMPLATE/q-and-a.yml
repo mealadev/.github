@@ -1,0 +1,26 @@
+title: "[Q&A]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a question about deploying Meala, parsing custom autopilot logs, or querying Parquet telemetry.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Self-Hosted Docker Deployment
+        - Autopilot Log Parsing (.bin, .ulg, .tlog, .bbl)
+        - Jupyter & Python SDK Usage
+        - Hardware / Telemetry Bridge Integration
+        - General Question
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Question & Context
+      description: Share your setup details, autopilot firmware version, and what you have tried so far.
+    validations:
+      required: true

@@ -1,0 +1,63 @@
+name: Bug Report
+description: Report a log parsing error, API issue, or web UI bug
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Meala! Please include enough detail for us to reproduce the issue.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the Meala ecosystem is affected?
+      options:
+        - Self-Hosted Server (FastAPI / PostgreSQL / Docker)
+        - Web Dashboard UI
+        - Telemetry Parser (pymavlink / pyulog / Parquet)
+        - Jupyter Notebook Toolkit
+        - Documentation / Other
+    validations:
+      required: true
+  - type: dropdown
+    id: autopilot
+    attributes:
+      label: Autopilot Stack & Log Format
+      options:
+        - ArduPilot DataFlash (.bin)
+        - ArduPilot / MAVLink Telemetry (.tlog)
+        - PX4 ULog (.ulg)
+        - INAV / Betaflight Blackbox (.bbl / .txt)
+        - Not Applicable
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / Commit Hash
+      placeholder: e.g., v0.2.0 or commit a8f91c2
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Upload log file...
+        2. Filter by...
+        3. Observe error...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Stack Trace or Docker Logs
+      render: shell

@@ -1,0 +1,35 @@
+name: Feature Request
+description: Suggest a new telemetry parser, SQL metric, chart overlay, or hardware bridge integration
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make flight log analysis faster or more automated? Share it below.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      options:
+        - Autopilot Log Parser / Canonical Schema
+        - SQL Querying & Worker Extraction Scripts
+        - Multi-Log Plotting & Web UI
+        - Hardware / Mobile Auto-Tagging (ESP32, DroneCAN, Check-in API)
+        - Python SDK / Jupyter Integration
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What operational bottleneck or flight-test pain point does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this working (API endpoints, UI behavior, or schema columns).
+    validations:
+      required: true
